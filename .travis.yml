@@ -1,0 +1,21 @@
+# Disable sudo to speed up the build
+sudo: false
+
+# Specify language
+language: python
+
+# Language version
+python: 
+  -"3.6"
+
+# Install dependencies
+install:
+  -pip install coveralls
+
+# Run script
+script:
+  -coverage run test.py
+
+# After success
+after_success:
+  -coveralls
