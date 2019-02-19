@@ -6,16 +6,16 @@ language: python
 
 # Language version
 python: 
-  -"3.6"
+  - "3.6"
 
 # Install dependencies
 install:
-  -pip install coveralls
+  - pip install coveralls
 
 # Run script
 script:
-  -coverage run test.py
+  - coverage run test.py
 
 # After success
 after_success:
-  -coveralls
+  - coveralls
